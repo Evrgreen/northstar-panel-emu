@@ -1,0 +1,22 @@
+.container {
+	--btnScale: 1;
+
+	@apply w-full;
+	display: grid;
+	height: 100%;
+
+	grid-template-columns: repeat(var(--cols), 1fr);
+	font-size: calc(var(--btnScale) * 1rem);
+
+	justify-content: space-around;
+	align-items: space-between;
+}
+.cols-3 {
+	--cols: 3;
+}
+.cols-2 {
+	--cols: 2;
+}
+.cols-4 {
+	--cols: 4;
+}

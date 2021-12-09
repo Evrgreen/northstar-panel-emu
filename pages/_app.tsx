@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import styles from '@styles/global.css';
+import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 	return (
@@ -12,7 +13,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 					content='minimum-scale=1, initial-scale=1, width=device-width'
 				/>
 			</Head>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 };

@@ -1,16 +1,104 @@
+@tailwind base;
+@tailwind components;
+.center {
+	@apply flex items-center justify-center;
+}
+@tailwind utilities;
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* global style tokens */
+
+:root {
+	/* standard colors */
+	--clr-neutral-100: #fff;
+
+	/* northstar colors*/
+	--clr-ns-primary-500: #3db7e4;
+	--clr-ns-primary-700: #002554;
+	--clr-ns-neutral-900: #000;
+	--clr-ns-neutral-500: #76777b;
+
+	/* lyric colors */
+	--clr-lyric-200: #015182;
+	--clr-lyric-700: #142a51;
+	--clr-lyric-900: #081627;
+	--clr-lyric-neutral-300: #e7e6e4;
+	--clr-lyric-neutral-400: #e2e2e4;
+	--clr-lyric-neutral-500: #d0d0d0;
+	--clr-lyric-neutral-700: #878787;
+	--clr-lyric-disarmed:#1f7d60;
+	--clr-lyric-alert-500: #aa1f24;
+	--clr-lyric-alert-700: #9a0614;
+	--clr-lyric-text-primary: #404040;
+	--clr-lyric-text-accent: #60d3ee;
+	--clr-lyric-highlight-400: #fecc47;
+
+	/* font scales */
+	--base: 1rem;
+	--scale: 1.25;
+	--lineHeight: 1.15;
+	--h5: calc(var(--base) * var(--scale));
+	--h4: calc(var(--h5) * var(--scale));
+	--h3: calc(var(--h4) * var(--scale));
+	--h2: calc(var(--h3) * var(--scale));
+	--h1: calc(var(--h2) * var(--scale));
+
+
+
+
+
+
+	/* width */
+	--cols:3;
+	--btnScale: 1;
+}
+
+p {
+	font-size: var(--base);
+}
+
+h5 {
+	font-size: var(--h5);
+}
+h4 {
+	font-size: var(--h4);
+}
+h3 {
+	font-size: var(--h3);
+}
+h2 {
+	font-size: var(--h2);
+}
+h1 {
+	font-size: var(--h1);
+	background: red;
+	line-height: calc(var(--h1) * var(--lineHeight));
+}
+small,
+.text-small {
+	font-size: var(--base) / var(--scale);
+}
+
+svg {
+	stroke: brown);
 }
