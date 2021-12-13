@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './lyricLayout.module.css';
 import TopBar from '@src/components/lyric/topBar';
+import Link from 'next/link';
 
 import PropTypes from 'prop-types';
 const propTypes = {
@@ -18,7 +19,9 @@ const LyricLayout = ({ children }: IndexProps) => {
 			<section className=' flex w-6/12  justify-between'>
 				<div className='w-12 h-12 bg-lyric-darkRed'></div>
 				<p>Honeywell</p>
-				<div className='w-12 h-12 bg-green-700'></div>
+				<Link href='/lyric/ui'>
+					<div className='w-12 h-12 bg-green-700'></div>
+				</Link>
 			</section>
 		</div>
 	);

@@ -46,7 +46,7 @@ a {
 	--clr-lyric-neutral-400: #e2e2e4;
 	--clr-lyric-neutral-500: #d0d0d0;
 	--clr-lyric-neutral-700: #878787;
-	--clr-lyric-disarmed:#1f7d60;
+	--clr-lyric-disarmed: #1f7d60;
 	--clr-lyric-alert-500: #aa1f24;
 	--clr-lyric-alert-700: #9a0614;
 	--clr-lyric-text-primary: #404040;
@@ -63,13 +63,8 @@ a {
 	--h2: calc(var(--h3) * var(--scale));
 	--h1: calc(var(--h2) * var(--scale));
 
-
-
-
-
-
 	/* width */
-	--cols:3;
+	--cols: 3;
 	--btnScale: 1;
 }
 
@@ -91,14 +86,9 @@ h2 {
 }
 h1 {
 	font-size: var(--h1);
-	background: red;
 	line-height: calc(var(--h1) * var(--lineHeight));
 }
 small,
 .text-small {
 	font-size: var(--base) / var(--scale);
-}
-
-svg {
-	stroke: brown);
 }

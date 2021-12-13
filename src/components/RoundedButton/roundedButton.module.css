@@ -1,5 +1,5 @@
 .container {
-	@apply flex flex-col justify-center items-center w-full text-red-700;
+	@apply flex flex-col justify-center items-center w-full;
 }
 /* .btn {
 	font-size: calc(var(--btnWidth) * 1rem);
@@ -8,12 +8,11 @@
 } */
 .btn {
 	position: relative;
-	@apply mb-1 rounded-full flex justify-center items-center border-4 border-white hover:border-ns-blue;
+	@apply aspect-square mb-1 rounded-full flex justify-center items-center border-4 border-white hover:border-ns-blue;
 	font-size: calc(var(--btnScale) * 3rem);
-	padding: 2em;
+
 	box-shadow: 1px 2px 1px 0 var(--clr-lyric-neutral-700);
-	width: clamp(5rem, 70%, 10rem);
-	height: clamp(5rem, 80%, 10rem);
+	width: clamp(5rem, 65%, 10rem);
 	font-size: inherit;
 	fill: currentColor;
 }

@@ -10,7 +10,7 @@ const colorDict = {
 	red: 'red',
 };
 
-const sizes = {};
+
 interface customProps {
 	icon: iconType;
 	color?: colors;

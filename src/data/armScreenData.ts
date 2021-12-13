@@ -2,19 +2,19 @@ import { Button } from './types';
 
 export const buttonData: Button[] = [
 	{
-		link: '/armKeypad',
+		link: '/keypad/away',
 		label: 'Arm Away',
 
 		icon: 'armedawayDark',
 	},
 	{
-		link: '/armKeypad',
-		label: 'Arm Away',
+		link: '/keypad/stay',
+		label: 'Arm Stay',
 
 		icon: 'armedawayDark',
 	},
 	{
-		link: '/armKeypad',
+		link: '/keypad/custom',
 		label: 'Arm Custom',
 
 		icon: 'armedawayDark',
