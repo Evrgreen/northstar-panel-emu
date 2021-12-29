@@ -6,7 +6,6 @@ interface props {
 
 const ArmedIcon = ({ armState }: props) => {
 	const [state, setState] = useState<iconType>(armState);
-	console.log('this is state', state);
 	if (!state) return <p>loading...</p>;
 
 	useEffect(() => {

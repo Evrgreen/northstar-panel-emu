@@ -7,5 +7,6 @@ const date = d.toLocaleDateString('en-us', {
 	month: 'long',
 	day: 'numeric',
 });
+const year = d.getFullYear();
 
-export default [time, date];
+export default [time, date, year];

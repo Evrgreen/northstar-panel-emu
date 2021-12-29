@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import RoundedButton from '@src/components/RoundedButton/RoundButton';
-import styles from './buttonlist.module.css';
+import { setComputedValueOnRoot } from '@src/utils/handleComputedValue';
 import { Button } from '@src/data/types';
 import Icon from '../lyric/icons/SecurtyIcon';
 
@@ -11,10 +11,13 @@ interface props {
 }
 
 const Buttonlist = ({ items, columns = 3, size }: props) => {
-	let cols = `cols-${columns}`;
-	console.log(cols);
+	const columnAmount = {
+		'--cols': columns.toString(),
+	} as React.CSSProperties;
 	return (
-		<section className={`${styles.container} ${styles[cols]}`}>
+		<section
+			className={`w-full grid [grid-template-columns:repeat(var(--cols),1fr)]      h-full`}
+			style={columnAmount}>
 			{items.map((item: Button) => (
 				<RoundedButton
 					size={50}

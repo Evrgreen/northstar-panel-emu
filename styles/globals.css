@@ -5,6 +5,21 @@
 }
 @tailwind utilities;
 
+@layer base {
+	:root {
+		--cols: 4;
+		--bg-pink: pink;
+	}
+}
+@layer utilities {
+	.aspect-squarebutton {
+		aspect-ratio: 10/1.8;
+	}
+	.aspect-revert {
+		aspect-ratio: revert;
+	}
+}
+
 html,
 body {
 	padding: 0;
@@ -42,7 +57,7 @@ a {
 	--clr-lyric-200: #015182;
 	--clr-lyric-700: #142a51;
 	--clr-lyric-900: #081627;
-	--clr-lyric-neutral-300: #e7e6e4;
+	--clr-lyric-neutral-300: #;
 	--clr-lyric-neutral-400: #e2e2e4;
 	--clr-lyric-neutral-500: #d0d0d0;
 	--clr-lyric-neutral-700: #878787;
@@ -64,7 +79,7 @@ a {
 	--h1: calc(var(--h2) * var(--scale));
 
 	/* width */
-	--cols: 3;
+
 	--btnScale: 1;
 }
 

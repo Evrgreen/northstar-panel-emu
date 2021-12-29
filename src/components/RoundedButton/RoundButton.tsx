@@ -20,7 +20,7 @@ const RoundButtons = ({
 }: RoundButtonsProps) => {
 	let content = (
 		<button className={`${styles.btn} bg-white`}>
-			<div className='text-4xl' >{children}</div>
+			<div className='text-4xl'>{children}</div>
 		</button>
 	);
 	if (link) {
@@ -33,7 +33,7 @@ const RoundButtons = ({
 							armStatus === 'armedstay'
 								? 'bg-red-800'
 								: armStatus === 'disarmed'
-								? 'bg-green-700'
+								? 'bg-green-700 text-ns-white'
 								: 'bg-white'
 						}`}>
 						{children}

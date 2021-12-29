@@ -11,19 +11,21 @@ export const buttonData: Button[] = [
 		link: '/keypad/stay',
 		label: 'Arm Stay',
 
-		icon: 'armedawayDark',
+		icon: 'armedstay',
 	},
 	{
 		link: '/keypad/custom',
 		label: 'Arm Custom',
 
-		icon: 'armedawayDark',
+		icon: 'armedaway',
 	},
 ];
-
+export const disarmButton: Button[] = [
+	{ link: '/keypad/disarm', label: 'Disarm', icon: 'disarmed' },
+];
 export const rightButtonData: Button[] = [
 	{ link: '/system', label: 'System', icon: 'notices' },
-	{ link: '/toolKeypad', label: 'Tools', icon: 'notices' },
+	{ link: '/keypad/tools', label: 'Tools', icon: 'notices' },
 	{ link: '/system', label: 'Messages', icon: 'notices' },
 	{ link: '/zones', label: 'Zones', icon: 'notices' },
 ];

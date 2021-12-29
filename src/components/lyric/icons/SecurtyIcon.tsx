@@ -10,30 +10,27 @@ const colorDict = {
 	red: 'red',
 };
 
-
 interface customProps {
 	icon: iconType;
 	color?: colors;
+	size?: string;
 }
 const SvgComponent = ({
 	icon,
 	color = 'dark',
-
+	size = '80',
 	...props
 }: SVGProps<SVGSVGElement> & customProps) => {
-	let content = <p>No Icon found</p>;
-	if (icon !== undefined) {
-		content = icons[icon];
-	}
+	let content = icons[icon] ?? <p>No Icon found</p>;
+
 	let clr = colorDict[color];
 	return (
 		<svg
-			className={`text-lyric-${clr}`}
+			className={`[fill:lyric-${clr}]`}
 			xmlns='http://www.w3.org/2000/svg'
 			width='100%'
-			height='80'
-			viewBox='0 0 100 100'
-			preserveAspectRatio='xMinYmin meet'>
+			height={size}
+			viewBox='0 0 100 100'>
 			{content}
 		</svg>
 	);
