@@ -8,10 +8,8 @@ import {
 import { useEffect, useState } from 'react';
 import router from 'next/router';
 import { ZoneType } from '@src/data/types';
-import { userFormButtonData } from '@src/data';
 import { useZoneContext } from '@src/store';
-import { zoneFormButtonData } from '@src/data/ZoneFormButtonData';
-import Grid from '@pages/lyric/ui/Grid';
+import { zoneFormButtonData } from '@src/data/zoneFormButtonData';
 interface props {
 	zone?: ZoneType;
 }

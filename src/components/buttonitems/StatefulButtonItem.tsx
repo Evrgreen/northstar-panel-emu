@@ -72,8 +72,8 @@ const StatefulButtonItem = ({ item }: props) => {
 					<div
 						onClick={toggleMultiLabel}
 						className='flex flex-col w-full h-full  items-center'>
-						<h5 className='text-lyric-grey-700'>{item.title}</h5>
-						{/* <p>{eval(item.callback!)}</p> */}
+						<p className=' text-xl text-lyric-grey-700'>{item.title}</p>
+						<p className=' text-2xl text-lyric-textPrimary mt-5'>{eval(item.callback!)}</p>
 					</div>
 				);
 			case 'roundKeyboard':

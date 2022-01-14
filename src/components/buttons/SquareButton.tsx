@@ -43,7 +43,9 @@ const SquareButton = ({
 	console.log(styles);
 	return (
 		<button
-			className={`bg-ns-white aspect-squarebutton col-span-3 text-2xl shadow-md flex items-center ${styles} ${newStyles}`}
+			className={`bg-ns-white aspect-squarebutton ${
+				styles ? styles : 'col-span-3'
+			} text-2xl shadow-md flex items-center  ${newStyles}`}
 			onClick={clickHandler ? clickHandler : null}>
 			{children}
 		</button>

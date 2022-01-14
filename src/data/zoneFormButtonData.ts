@@ -128,13 +128,16 @@ export const zoneFormButtonData: squareButtonWithState[] = [
 		label: 'alarmreport',
 		type: 'toggle',
 		callback: 'state === true ? "Yes": "No"',
+		additionalstyles: 'col-span-2 aspect-revert h-[80px]',
 	},
 
 	{
 		title: 'Chime',
 		label: 'chime',
 		type: 'multiToggle',
-		// callback: 'item.options[state]',
+		callback: 'item.options[state]',
+		options: chimeOptions,
+		additionalstyles: 'col-span-2 aspect-revert h-[80px]',
 	},
 
 	{
@@ -142,6 +145,6 @@ export const zoneFormButtonData: squareButtonWithState[] = [
 		label: 'supervision',
 		type: 'toggle',
 		callback: 'state === true ? "Supervised": "Unsupervised"',
-		additionalstyles: 'w-1/3',
+		additionalstyles: 'col-span-2 aspect-revert h-[80px]',
 	},
 ];

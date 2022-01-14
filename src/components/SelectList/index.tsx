@@ -4,10 +4,8 @@ import React, {
 	useEffect,
 	useState,
 } from 'react';
-import SquareButton from '@src/components/buttons/SquareButton';
-import { GridWithSideBar } from '@src/components/lyric';
+import { GridWithSideBar, Grid } from '@src/components/lyric';
 import { MandateProps, squareButtonWithState } from '@src/data/types';
-import Grid from '@pages/lyric/ui/Grid';
 import RightBar from '../lyric/rightBar';
 
 interface props {
