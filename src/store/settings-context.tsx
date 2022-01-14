@@ -38,5 +38,6 @@ export const SettingsContextProvider = (props: any) => {
 		</SettingsContext.Provider>
 	);
 };
+const useSettingsContext = () => useContext(SettingsContext);
 
-export default SettingsContext;
+export default useSettingsContext;

@@ -5,16 +5,16 @@ import GridWithSideBar from '@src/components/lyric/ui/GridWithSideBar';
 import React from 'react';
 
 const buttons = [
-	{ label: 'System Information', link: 'lyric/ui/toolbox/user/systeminfo' },
-	{ label: 'Walk Test', link: 'lyric/ui/toolbox/user/systeminfo' },
+	{ label: `System Information`, link: 'advanced/systeminfo' },
+	{ label: 'Walk Test', link: 'advanced/systeminfo' },
 	{
 		label: 'Install Cellular Module',
-		link: 'lyric/ui/toolbox/user/systeminfo',
+		link: 'advanced/cellinstall',
 	},
 	{ label: 'Comm. Test', link: 'lyric/ui/toolbox/user/systeminfo' },
 	{
 		label: 'Install Backup Battery',
-		link: 'lyric/ui/toolbox/user/systeminfo',
+		link: 'advanced/batteryinstall',
 	},
 	{ label: 'Reboot', link: 'lyric/ui/toolbox/user/systeminfo' },
 	{

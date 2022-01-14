@@ -5,12 +5,12 @@ import KeypadKeys from '@src/components/buttonlist/keypad/KeypadKeys';
 import KeypadInfo from '@src/components/buttonlist/keypad/KeypadInfo';
 import { useKeypadLogic } from '@src/hooks/useKeypadLogic';
 const KeypadPage = () => {
-	const {code, buttonClick} = useKeypadLogic()
+	const { code, buttonClick } = useKeypadLogic();
 	return (
 		<div className='grid [grid-template-columns:40%_60%] max-w-full'>
-			<KeypadInfo code={code}/>
+			<KeypadInfo code={code} />
 			<div className='box-border   w-full bg-lyric-grey-300 col-start-2 grid [grid-template-columns:85%_15%]'>
-				<KeypadKeys clickHandler={buttonClick}/>
+				<KeypadKeys clickHandler={buttonClick} />
 				<div className='max-w-full w-full'>
 					<RightBar />
 				</div>

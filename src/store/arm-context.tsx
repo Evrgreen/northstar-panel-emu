@@ -1,5 +1,5 @@
 import { ArmType } from '@src/data/types';
-import { createContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { ARM_STATUS_CONSTS } from '@src/data/constants';
 
 const ArmContext = createContext({
@@ -20,7 +20,6 @@ export const ArmContextProvider = (props: any) => {
 	};
 	const exitCountdown = () => {};
 	const disarm = () => {
-		console.log('disarming in contextF');
 		setArmedStatus(ARM_STATUS_CONSTS.DISARMED);
 	};
 	const armAway = () => {
@@ -49,4 +48,6 @@ export const ArmContextProvider = (props: any) => {
 	);
 };
 
-export default ArmContext;
+const useArmContext = () => useContext(ArmContext);
+
+export default useArmContext;

@@ -1,13 +1,16 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement } from 'react';
 
-interface props {
+interface props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactElement[] | ReactElement;
+	clickHandler?: any;
 	classNames?: string;
 	secondary?: boolean;
 	center?: boolean;
 	full?: boolean;
 	revert?: boolean;
 	deps?: string;
+	disabled?: boolean;
+	styles?: string;
 }
 const styleList = {
 	secondary: 'bg-lyric-blue text-ns-white',
@@ -17,25 +20,31 @@ const styleList = {
 };
 
 export type Styles = keyof typeof styleList;
-const SquareButton = ({ children, classNames, deps, ...rest }: props) => {
-	const [hidden, sethidden] = useState(() => {
-		return typeof deps === 'boolean' ? deps : true;
-	});
-
-	let styles;
+const SquareButton = ({
+	children,
+	classNames,
+	deps,
+	disabled,
+	clickHandler,
+	styles,
+	...rest
+}: props) => {
+	let newStyles;
 
 	if (rest) {
-		styles = Object.keys(rest)
+		newStyles = Object.keys(rest)
 			.map((style) => styleList[style as Styles])
 			.join(' ');
 	}
-	if (typeof children.props.item.linkedState !== 'undefined') {
-		styles += styleList['full'];
+	if (typeof children?.props?.item?.linkedState !== 'undefined') {
+		newStyles += styleList['full'];
 		if (children.props.item.linkedState === false) return <></>;
 	}
+	console.log(styles);
 	return (
 		<button
-			className={`bg-ns-white w-full aspect-squarebutton text-2xl shadow-md flex items-center  ${styles} `}>
+			className={`bg-ns-white aspect-squarebutton col-span-3 text-2xl shadow-md flex items-center ${styles} ${newStyles}`}
+			onClick={clickHandler ? clickHandler : null}>
 			{children}
 		</button>
 	);

@@ -3,7 +3,7 @@ import CodeDisplay from './CodeDisplay';
 import KeypadActionButtons from './KeypadActionButtons';
 import KeypadTitle from './KeypadTitle';
 interface props {
-	code: number[];
+	code: string;
 }
 
 const KeypadInfo = ({ code }: props) => {

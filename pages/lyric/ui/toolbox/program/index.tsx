@@ -9,7 +9,7 @@ const buttons = [
 	{ label: 'System Type', link: 'keypad' },
 	{ label: 'Date Time', link: 'keypad' },
 	{ label: 'Communicator', link: 'keypad' },
-	{ label: 'Zones', link: 'keypad' },
+	{ label: 'Zones', link: 'program/zoneprogramming' },
 	{ label: 'Comm. Diagnostics', link: 'keypad' },
 	{ label: 'Keys', link: 'keypad' },
 	{ label: 'Reporter', link: 'keypad' },

@@ -4,6 +4,7 @@ import SquareButtonList from '@src/components/buttonlist/SquareButtonList';
 import EventButtonItem from '@src/components/buttonitems/eventButtonItem';
 import GridWithSideBar from '@src/components/lyric/ui/GridWithSideBar';
 import ActionButtonContainer from '@src/components/buttonlist/ActionButtonContainer';
+import { getLayout } from '@src/components/layout/lyric';
 
 const events = [
 	{
@@ -28,7 +29,7 @@ const events = [
 	},
 ];
 
-const index = () => {
+const EventPage = () => {
 	return (
 		<GridWithSideBar>
 			<SquareButtonList items={events}>
@@ -44,4 +45,5 @@ const index = () => {
 	);
 };
 
-export default index;
+EventPage.getLayout = getLayout;
+export default EventPage;

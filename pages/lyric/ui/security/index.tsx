@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import { getLayout } from '@src/components/layout/lyric/index';
 import ButtonList from '@src/components/buttonlist/Buttonlist';
 import {
@@ -7,18 +6,18 @@ import {
 	disarmButton,
 } from '@src/data/armScreenData';
 import Icon from '@src/components/lyric/icons/SecurtyIcon';
-import ArmContext from '@src/store/arm-context';
+import { useArmContext } from '@src/store';
 import BottomBar from '@src/components/buttonlist/BottomBar';
 import { ARM_STATUS_CONSTS, TITLE_CONSTS } from '@src/data/constants';
 
 const SecurityPage = () => {
-	const { armState } = useContext(ArmContext);
+	const { armState } = useArmContext();
 	const title = TITLE_CONSTS[armState];
 
 	return (
 		<>
-			<div className='flex flex-wrap w-full   relative'>
-				<div className='  w-2/4 flex flex-col justify-between bg-lyric-grey-400 pt-5'>
+			<div className='grid grid-cols-2 w-full   relative'>
+				<div className='   flex flex-col justify-between bg-lyric-grey-400 pt-5'>
 					<section className=' text-center '>
 						<Icon icon={'disarmgreen'} size={'180'} />
 						<h4>{title}</h4>
@@ -31,7 +30,7 @@ const SecurityPage = () => {
 						)}
 					</div>
 				</div>
-				<div className=' w-2/4 mx-auto bg-lyric-grey pt-16'>
+				<div className=' w-full py-8'>
 					<ButtonList items={rightButtonData} size={2} columns={2} />
 				</div>
 				<BottomBar />

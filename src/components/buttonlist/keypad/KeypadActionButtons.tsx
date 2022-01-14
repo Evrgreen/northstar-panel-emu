@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { useDynamicSlug } from '@src/utils/useDynamicSlug';
-import SettingsContext from '@src/store/settings-context';
-import ArmContext from '@src/store/arm-context'
+import { useDynamicSlug } from '@src/utils/useRouterHelpers';
+import { useArmContext, useSettingsContext } from '@src/store';
+
 const actionButtonTypes = {
 	away: [
 		{ label: 'Quick Arm', callback: () => {} },
@@ -16,8 +15,8 @@ const actionButtonTypes = {
 type actionButtons = keyof typeof actionButtonTypes;
 const KeypadActionButtons = () => {
 	const armType = useDynamicSlug() as actionButtons;
-	const { settings } = useContext(SettingsContext);
-	const ArmCtx = useContext(ArmContext)
+	const { settings } = useSettingsContext();
+
 	let content = actionButtonTypes[armType];
 	if (!content) {
 		return <div></div>;
@@ -30,7 +29,9 @@ const KeypadActionButtons = () => {
 	return (
 		<div className='w-11/12    mx-auto  grid grid-cols-2 gap-11'>
 			{content.map((item) => (
-				<button key={item.label} className=' bg-ns-white py-5  shadow-md text-lyric-textAccent text-xl '>
+				<button
+					key={item.label}
+					className=' bg-ns-white py-5  shadow-md text-lyric-textAccent text-xl '>
 					{item.label}
 				</button>
 			))}

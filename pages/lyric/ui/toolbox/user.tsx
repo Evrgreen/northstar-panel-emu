@@ -7,7 +7,7 @@ import BottomBar from '@src/components/buttonlist/BottomBar';
 const UserToolboxPage = () => {
 	return (
 		<>
-			<div className='relative w-full py-5'>
+			<div className='relative w-full pb-16'>
 				<ButtonList items={userToolboxdata} columns={4} />
 				<BottomBar />
 			</div>

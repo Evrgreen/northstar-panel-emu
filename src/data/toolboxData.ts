@@ -1,4 +1,4 @@
-import { Button, squareButton } from './types';
+import { Button, squareButtonWithLink } from './types';
 
 const userPath = '/toolbox/user';
 
@@ -24,7 +24,7 @@ export const userToolboxdata: Button[] = [
 	{ label: 'WIFI Config', icon: 'armedawayDark', link: `${userPath}/wifi` },
 ];
 
-export const installerToolboxData: squareButton[] = [
+export const installerToolboxData: squareButtonWithLink[] = [
 	{ label: 'Program', link: '/programming' },
 
 	{ label: 'Test', link: `${techPath}/test` },

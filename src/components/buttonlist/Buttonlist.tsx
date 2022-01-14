@@ -16,7 +16,7 @@ const Buttonlist = ({ items, columns = 3, size }: props) => {
 	} as React.CSSProperties;
 	return (
 		<section
-			className={`w-full grid [grid-template-columns:repeat(var(--cols),1fr)]      h-full`}
+			className={`w-full grid [grid-template-columns:repeat(var(--cols),1fr)]    items-center  h-full`}
 			style={columnAmount}>
 			{items.map((item: Button) => (
 				<RoundedButton

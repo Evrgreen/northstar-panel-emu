@@ -4,14 +4,23 @@ const propTypes = {};
 type SettingsProps = PropTypes.InferProps<typeof propTypes>;
 import ButtonList from '@src/components/buttonlist/Buttonlist';
 import { buttondata } from '@src/data/homescreeData';
+import { getLayout } from '@src/components/layout/lyric';
+import { GridWithSideBar } from '@src/components/lyric';
+import RightBar from '@src/components/lyric/rightBar';
 
-const Settings = ({}: SettingsProps) => {
+const SettingsPage = ({}: SettingsProps) => {
 	return (
-		<>
-			<h1>Settings Page</h1>
-			<ButtonList items={buttondata} col={3} size={1} />
-		</>
+		<div className='grid [grid-template-columns:90%_10%] w-full bg-orange-400 h-full'>
+			<div className=' grid grid-cols-2 bg-slate-500 h-full w-full'>
+				<div>
+					
+				</div>
+			</div>
+			<RightBar />
+			<div className=' col-start-1 w-full bg-green-300'></div>
+		</div>
 	);
 };
-export default Settings;
-Settings.propTypes = propTypes;
+
+SettingsPage.getLayout = getLayout;
+export default SettingsPage;

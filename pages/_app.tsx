@@ -4,7 +4,6 @@ import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import { NextPage } from 'next';
-import LyricLayout from '@src/components/layout/lyric';
 
 type GetLayout = (page: ReactNode) => ReactNode;
 
